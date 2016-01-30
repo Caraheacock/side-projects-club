@@ -17,7 +17,6 @@
 
 #footer-menu {
     ul {
-        margin: 15px 0 10px 0;
         margin: 1.5rem 0 1rem 0;
         list-style: none;
     }
@@ -26,7 +25,6 @@
         display: inline-block;
         margin: 0;
         border-left: solid 1px #fff;
-        font-size: 12px;
         font-size: 1.2rem;
         font-weight: $semibold;
         
@@ -37,6 +35,14 @@
         a {
             display: block;
             padding: 0 5px 0 7px;
+        }
+        
+        @include breakpoint($size-md) {
+            font-size: 1.4rem;
+            
+            a {
+                padding: 0 15px;
+            }
         }
     }
 }

@@ -8,6 +8,25 @@
     margin: 2rem auto;
 }
 
+@include breakpoint($size-md) {
+    .alignleft, .alignright {
+        max-width: 50%;
+        margin-top: 0;
+    }
+    
+    .alignleft {
+        float: left;
+        clear: right;
+        margin-right: 2rem;
+    }
+
+    .alignright {
+        float: right;
+        clear: left;
+        margin-left: 2rem;
+    }
+}
+
 .bypostauthor {
     background-color: $light-gray;
 }

@@ -100,3 +100,29 @@ a {
         color: $orange;
     }
 }
+
+@include breakpoint($size-md) {
+    h1 {
+        font-size: 60px;
+        font-size: 6rem;
+    }
+    
+    h2 {
+        font-size: 45px;
+        font-size: 4.5rem;
+    }
+    
+    h3 {
+        font-size: 36px;
+        font-size: 3.6rem;
+    }
+    
+    p, li, th, td {
+        font-size: 20px;
+        font-size: 2rem;
+    }
+    
+    p {
+        line-height: 1.85;
+    }
+}

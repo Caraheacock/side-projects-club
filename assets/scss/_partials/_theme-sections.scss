@@ -92,5 +92,13 @@
         &:nth-child(even) {
             @include transform(translate(0, 25%));
         }
+        
+        @include breakpoint($size-md) {
+            font-size: 3.6rem;
+        }
+        
+        @include breakpoint($size-lg) {
+            font-size: 4.8rem;
+        }
     }
 }

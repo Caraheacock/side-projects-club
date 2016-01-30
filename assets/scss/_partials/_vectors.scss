@@ -28,7 +28,7 @@
     padding-bottom: 50px;
     
     &:hover {
-        @include opacity(0.75);
+        opacity: 0.75;
     }
 }
 

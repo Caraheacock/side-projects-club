@@ -2,6 +2,12 @@
 // Mixins //
 //--------//
 
+@mixin animation($animation) {
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    animation: $animation;
+}
+
 @mixin box-shadow($shadow...) {
     -webkit-box-shadow: $shadow;
     -moz-box-shadow:    $shadow;
@@ -11,6 +17,12 @@
 // usage: @include breakpoint(480px) { your styles here }
 @mixin breakpoint($point) {
     @media all and (min-width: $point) {
+        @content;
+    }
+}
+
+@mixin breakpoint-max-height($point) {
+    @media all and (max-height: $point) {
         @content;
     }
 }
@@ -32,14 +44,18 @@
     filter: $filter;
 }
 
-@mixin opacity($n) {
-    $ie-n: $n * 100;
-    // IE 8
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $ie-n + ")";
-    // IE 5-7
-    filter: alpha(opacity=$ie-n);
-    // Good browsers
-    opacity: $n;
+@mixin keyframes($animation_name) {
+    @-webkit-keyframes #{$animation_name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation_name} {
+        @content;
+    }
+
+    @keyframes #{$animation_name} {
+        @content;
+    }
 }
 
 %page-max-width {

@@ -3,30 +3,46 @@
 /*----------------*/
 
 #nav {
-    @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
-    position: absolute;
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    background-color: rgba(#fff, 0.95);
     z-index: 2;
     width: 100%;
-    background-color: #fff;
-    background-color: rgba(#fff, 0.95);
+    @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
+    @include transition(background-color 0.4s ease, box-shadow 0.4s ease);
     
-    &.sticky-nav {
-        position: fixed;
-        top: 0;
+    &.home-nav {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        background-color: rgba(#fff, 0.05);
+        
+        &.animate-nav {
+            @include animation(navappear 1.5s ease 0s 1);
+        }
+        
+        .home-scroll-to-content {
+            display: block;
+        }
+        
+        .nav-logo {
+            display: none;
+        }
+        
+        a {
+            color: #fff;
+            
+            &:hover {
+                color: rgba(#fff, 0.5);
+            }
+        }
     }
     
     .row {
-        display: table;
-        table-layout: fixed;
-        width: 100%;
+        @include align-items(center);
         height: 70px;
         padding: 5px;
-        
-        .column {
-            display: table-cell;
-            float: none;
-            vertical-align: middle;
-        }
     }
     
     ul {
@@ -34,7 +50,6 @@
     }
     
     li {
-        font-size: 14px;
         font-size: 1.4rem;
         font-weight: $semibold;
         text-transform: uppercase;
@@ -45,8 +60,39 @@
         text-decoration: none;
     }
     
-    .small-logo-container {
+    .home-scroll-to-content {
+        display: none;
+        
+        .puzzle-button {
+            background-color: rgba(#fff, 0.9);
+            color: $blue;
+            
+            &:hover {
+                background-color: $orange;
+                color: #fff;
+            }
+        }
+    }
+    
+    .home-scroll-to-content .puzzle-button, .small-logo-container {
         margin-left: 30px;
+    }
+}
+
+@include keyframes(navappear) {
+    0%, 50% { opacity: 0; }
+    100%    { opacity: 1; }
+}
+
+@include breakpoint(601px) {
+    body.admin-bar #nav:not(.home-nav) {
+        top: 46px;
+    }
+}
+
+@include breakpoint(783px) {
+    body.admin-bar #nav:not(.home-nav) {
+        top: 32px;
     }
 }
 
@@ -68,6 +114,14 @@
         &.dl-active {
             background-color: $orange;
         }
+        
+        .home-nav & {
+            background-color: rgba(#fff, 0.3);
+            
+            &.dl-active {
+                background-color: $orange;
+            }
+        }
     }
     
     ul {
@@ -85,12 +139,12 @@
         padding-top: 10px;
         padding-bottom: 10px;
         color: #fff;
-        font-size: 12px;
         font-size: 1.2rem;
         font-weight: $semibold;
         
         &:hover {
             background-color: $orange;
+            color: #fff;
         }
     }
     
@@ -118,10 +172,20 @@
                 display: block;
                 padding: 10px 15px;
                 
-                &:hover, &:active {
+                &:hover {
                     color: $blue;
                 }
             }
         }
+    }
+}
+
+@include breakpoint($size-md) {
+    #dl-menu {
+        display: none;
+    }
+    
+    #nav-menu {
+        display: block;
     }
 }

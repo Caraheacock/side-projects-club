@@ -6,15 +6,14 @@
     @include transition (all 0.4s ease);
     @extend %default-border-radius;
     display: inline-block;
-    padding: 10px 15px;
+    padding: 10px 20px;
+    border: 0;
     background-color: $blue;
-    border: solid 1px $blue;
     color: #fff;
     text-align: center;
     text-decoration: none;
     
     &:hover {
-        border-color: $orange;
         background-color: $orange;
         color: #fff;
     }
