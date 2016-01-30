@@ -1,0 +1,73 @@
+/*--------*/
+/* Global */
+/*--------*/
+
+html, body {
+    height: 100%;
+}
+
+html {
+    // Allows for rems to size similar to px
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+    font: 16px / 1.5 $open-sans;
+    font-size: 1.6rem;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+main {
+    display: block;
+    
+    > section {
+        &:first-child {
+            padding-top: 100px;
+            
+            &:only-child {
+                padding-bottom: 70px;
+            }
+        }
+    }
+    
+    ul, ol {
+        margin-left: 30px;
+    }
+}
+
+section {
+    position: relative;
+    padding: 30px 0;
+    
+    &.no-padding-top {
+        padding-top: 0;
+    }
+    
+    &.no-padding-bottom {
+        padding-bottom: 0;
+    }
+    
+    &.large-padding-top {
+        padding-top: 60px;
+    }
+    
+    &.large-padding-bottom {
+        padding-bottom: 60px;
+    }
+}
+
+iframe {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+a img {
+    border: 0;
+}

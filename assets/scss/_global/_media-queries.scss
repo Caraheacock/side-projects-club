@@ -1,0 +1,121 @@
+/*---------------*/
+/* Media Queries */
+/*---------------*/
+
+@media all and (max-height: 500px) {
+    .header-content {
+        max-width: 200px;
+    }
+}
+
+@media all and (min-width: $size-sm) {
+    .puzzle-features {
+        .puzzle-features-content {
+            .icon-row {
+                .puzzle-main-icon, .puzzle-icon-link, .puzzle-feature-column-content {
+                    float: left;
+                }
+        
+                .puzzle-feature-column-content {
+                    width: 60%;
+                    width: calc(100% - 90px);
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 601px) {
+    body.admin-bar #nav.sticky-nav {
+        top: 46px;
+    }
+}
+
+@media all and (min-width: $size-md) {
+    h1 {
+        font-size: 60px;
+        font-size: 6rem;
+    }
+    
+    h2 {
+        font-size: 45px;
+        font-size: 4.5rem;
+    }
+    
+    h3 {
+        font-size: 36px;
+        font-size: 3.6rem;
+    }
+    
+    p, li, th, td {
+        font-size: 20px;
+        font-size: 2rem;
+    }
+    
+    p {
+        line-height: 1.85;
+    }
+    
+    .alignleft, .alignright {
+        max-width: 50%;
+        margin-top: 0;
+    }
+    
+    .alignleft {
+        float: left;
+        clear: right;
+        margin-right: 20px;
+        margin-right: 2rem;
+    }
+
+    .alignright {
+        float: right;
+        clear: left;
+        margin-left: 20px;
+        margin-left: 2rem;
+    }
+    
+    #dl-menu {
+        display: none;
+    }
+    
+    #nav-menu {
+        display: block;
+    }
+    
+    .who-its-for-word-cloud {
+        h2 {
+            font-size: 36px;
+            font-size: 3.6rem;
+        }
+    }
+    
+    #footer-menu {
+        li {
+            font-size: 14px;
+            font-size: 1.4rem;
+            
+            a {
+                padding: 0 15px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 783px) {
+    body.admin-bar #nav.sticky-nav {
+        top: 32px;
+    }
+}
+
+@media all and (min-width: $size-lg) {
+    .who-its-for-word-cloud {
+        h2 {
+            font-size: 48px;
+            font-size: 4.8rem;
+        }
+    }
+}
+
+@media all and (min-width: $size-xl) {
+}

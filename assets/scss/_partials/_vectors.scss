@@ -1,0 +1,49 @@
+/*---------*/
+/* Vectors */
+/*---------*/
+
+.spc-header-logo-icon-container,
+.spc-header-logo-text-container,
+.small-logo-container,
+.spc-excitement-vector-container,
+.spc-question-vector-container,
+.spc-projects-group-vector-container,
+.spc-triumph-vector-container {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    
+    svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+.small-logo-container {
+    display: block;
+    width: 36px;
+    padding-bottom: 50px;
+    
+    &:hover {
+        @include opacity(0.75);
+    }
+}
+
+.spc-excitement-vector-container {
+    padding-bottom: (100% * 375 / 408);
+}
+
+.spc-question-vector-container {
+    padding-bottom: (100% * 437 / 330);
+}
+
+.spc-projects-group-vector-container {
+    padding-bottom: (100% * 450 / 852);
+}
+
+.spc-triumph-vector-container {
+    padding-bottom: (100% * 458 / 252);
+}

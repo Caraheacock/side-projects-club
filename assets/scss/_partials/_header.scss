@@ -1,0 +1,70 @@
+/*--------*/
+/* Header */
+/*--------*/
+
+$header-max-width: 500;
+
+#header {
+    height: 100%;
+    background-color: $blue;
+}
+
+.header-content {
+    @extend %vertical-center-fix;
+    max-width: $header-max-width + px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+.spc-header-logo-icon-container, .spc-header-logo-text-container {
+    position: relative;
+}
+
+.spc-header-logo-icon-container {
+    width: (100% * 200 / $header-max-width);
+    margin: 0 auto;
+    padding-bottom: (100% * 285 / $header-max-width);
+    -webkit-animation: slideupicon 1s ease 0s 1;
+       -moz-animation: slideupicon 1s ease 0s 1;
+            animation: slideupicon 1s ease 0s 1;
+}
+
+.spc-header-logo-text-container {
+    @include transform(translate(-22%, -25%));
+    width: (100% * 334 / $header-max-width);
+    margin: 0 auto;
+    padding-bottom: (100% * 178 / $header-max-width);
+    -webkit-animation: slideuptext 2s ease 0s 1;
+       -moz-animation: slideuptext 2s ease 0s 1;
+            animation: slideuptext 2s ease 0s 1;
+}
+
+@-webkit-keyframes slideupicon {
+    0%, 25% { top: 20px; opacity: 0; }
+    100%    { top: 0;    opacity: 1; }
+}
+
+@-moz-keyframes slideupicon {
+    0%, 25% { top: 20px; opacity: 0; }
+    100%    { top: 0;    opacity: 1; }
+}
+
+@keyframes slideupicon {
+    0%, 25% { top: 20px; opacity: 0; }
+    100%    { top: 0;    opacity: 1; }
+}
+
+@-webkit-keyframes slideuptext {
+    0%, 50% { top: 20px; opacity: 0; }
+    100%    { top: 0;    opacity: 1; }
+}
+
+@-moz-keyframes slideuptext {
+    0%, 50% { top: 20px; opacity: 0; }
+    100%    { top: 0;    opacity: 1; }
+}
+
+@keyframes slideuptext {
+    0%, 50% { top: 20px; opacity: 0; }
+    100%    { top: 0;    opacity: 1; }
+}

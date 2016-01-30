@@ -1,0 +1,44 @@
+/*---------------------------*/
+/* puzzle Contact Info Section */
+/*---------------------------*/
+
+.puzzle-contact-info {
+    margin: 15px 0;
+    margin: 1.5rem 0;
+    
+    .row {
+        margin: 10px 0;
+        margin: 1rem 0;
+    }
+    
+    .column {
+        padding: 0;
+        
+        &.puzzle-contact-info-icon {
+            width: 40px;
+    
+            i {
+                font-size: 28px;
+                font-size: 2.8rem;
+                
+                &.puzzle-contact-info-location-icon:before {
+                    content: '\f041'; /* fa-map-marker */
+                }
+                
+                &.puzzle-contact-info-phone-icon:before {
+                    content: '\f095'; /* fa-phone */
+                }
+                
+                &.puzzle-contact-info-email-icon:before {
+                    content: '\f003'; /* fa-envelope-o */
+                }
+            }
+        }
+        
+        &.puzzle-contact-info-content {
+            width: 50%;
+            width: calc(100% - 40px);
+            word-wrap: break-word;
+        }
+    }
+}
