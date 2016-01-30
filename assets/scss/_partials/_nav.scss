@@ -64,8 +64,10 @@
         display: none;
         
         .puzzle-button {
+            margin-left: 15px;
             background-color: rgba(#fff, 0.9);
             color: $blue;
+            text-transform: uppercase;
             
             &:hover {
                 background-color: $orange;
@@ -74,7 +76,7 @@
         }
     }
     
-    .home-scroll-to-content .puzzle-button, .small-logo-container {
+    .small-logo-container {
         margin-left: 30px;
     }
 }

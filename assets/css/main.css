@@ -1287,12 +1287,14 @@ body.admin-bar.home #header {
   #nav .home-scroll-to-content {
     display: none; }
     #nav .home-scroll-to-content .puzzle-button {
+      margin-left: 15px;
       background-color: rgba(255, 255, 255, 0.9);
-      color: #6e90ca; }
+      color: #6e90ca;
+      text-transform: uppercase; }
       #nav .home-scroll-to-content .puzzle-button:hover {
         background-color: #f2af56;
         color: #fff; }
-  #nav .home-scroll-to-content .puzzle-button, #nav .small-logo-container {
+  #nav .small-logo-container {
     margin-left: 30px; }
 
 @-webkit-keyframes navappear {
