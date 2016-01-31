@@ -1,18 +1,19 @@
 <?php
 $footer = get_option('puzzle_footer');
-$footer_logo = (!empty($footer['logo']) ? stripslashes_deep($footer['logo']) : false);
-$footer_content = (!empty($footer['content']) ? stripslashes_deep($footer['content']) : false);
-$social = array_filter(get_option('puzzle_social', array()));
+$social = array_filter(array(
+    'facebook'  => get_theme_mod('facebook'),
+    'meetup'    => get_theme_mod('meetup'),
+    'twitter'   => get_theme_mod('twitter'),
+    'tumblr'    => get_theme_mod('tumblr')
+));
 ?>
     <footer id="footer" class="blue-background">
         <div class="row">
             <div class="column xs-span12">
                 <div class="column-inner">
-                    <?php if ($footer_logo) : ?>
                     <a class="small-logo-container" href="<?php echo get_site_url(); ?>">
-                        <?php echo $footer_logo; ?>
+                        <?php include('assets/images/logo.svg'); ?>
                     </a>
-                    <?php endif; ?>
                     <?php
                     if (has_nav_menu('footer')) {
                         $args = array(

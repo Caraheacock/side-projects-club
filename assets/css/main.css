@@ -1601,6 +1601,8 @@ body.admin-bar.home #header {
     margin: 0; }
   #footer .small-logo-container {
     margin: 0 auto; }
+    #footer .small-logo-container circle, #footer .small-logo-container path {
+      fill: #fff; }
 
 #footer-menu ul {
   margin: 1.5rem 0 1rem 0;

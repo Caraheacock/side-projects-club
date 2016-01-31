@@ -85,22 +85,19 @@ $nav_logo = (!empty($nav['logo']) ? stripslashes_deep($nav['logo']) : false);
             </div>
         </div>
         <?php endif; ?>
-        <?php if (has_nav_menu('primary') || $nav_logo) : ?>
         <nav id="nav"<?php echo (is_front_page() ? ' class="home-nav animate-nav"' : ''); ?>>
             <div class="row">
-                <?php if ($nav_logo) : ?>
                 <div class="column xs-span8 sm-span6 md-span4 lg-span3 nav-logo">
                     <a class="small-logo-container" href="<?php echo get_site_url(); ?>">
-                        <?php echo $nav_logo; ?>
+                        <?php include('assets/images/logo.svg'); ?>
                     </a>
                 </div>
-                <?php endif; ?>
                 <?php if (is_front_page()) : ?>
                 <div class="column xs-span8 sm-span6 md-span4 lg-span3 home-scroll-to-content">
                     <a class="puzzle-button" href="#">Explore <i class="fa fa-angle-double-down"></i></a>
                 </div>
                 <?php endif; ?>
-                <div class="column <?php echo ($nav_logo || is_front_page() ? 'xs-span4 sm-span6 md-span8 lg-span9' : 'xs-span12'); ?>">
+                <div class="column xs-span4 sm-span6 md-span8 lg-span9">
                     <?php
                     if (has_nav_menu('primary')) {
                         $args = array(
@@ -138,5 +135,4 @@ $nav_logo = (!empty($nav['logo']) ? stripslashes_deep($nav['logo']) : false);
                 </div>
             </div>
         </nav>
-        <?php endif; ?>
     </header>
