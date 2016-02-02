@@ -17,10 +17,27 @@ if (!empty($page_sections)) :
         }
         ?>
         <section id="<?php echo $section_id; ?>" class="<?php echo section_classes($page_section); ?>">
-            <div class="row">
+            <?php if (!empty($puzzle_options_data['headline'])) : ?>
+            <div class="row puzzle-section-headline">
+                <div class="column xs-span12">
+                    <div class="column-inner">
+                        <h2><?php echo $puzzle_options_data['headline']; ?></h2>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+            <div class="row<?php echo ($puzzle_section_type == 'accordions' ? ' puzzle-accordions-content' : ''); ?>">
                 <?php
+                $loop_file_name = $puzzle_section_type;
+                
+                if ($puzzle_section_type == 'one-column' || $puzzle_section_type == 'two-column') {
+                    $loop_file_name = 'columns';
+                }
+                
+                $loop_file_location = 'theme/loops/' . $loop_file_name . '.php';
+        
                 foreach($puzzle_columns_data as $puzzle_column) {
-                    include(locate_template('loop-column.php'));
+                    include(locate_template($loop_file_location));
                 }
                 ?>
             </div>

@@ -33,7 +33,7 @@ $two_column->set_group_name('Two Column')
     ))
     ->set_options(array(
         'id'                => array(
-            'name'          => 'Section Slug',
+            'name'          => 'Section ID',
             'width'         => 'xs-span12 sm-span6',
             'input_type'    => 'text'
         ),

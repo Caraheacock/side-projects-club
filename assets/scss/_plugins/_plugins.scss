@@ -54,6 +54,7 @@
             font-size: 24px;
             font-size: 2.4rem;
             font-weight: $semibold;
+            @include transition(all 0.4s ease);
         }
         
         .ai1ec-event-time {
@@ -63,8 +64,10 @@
         }
         
         .ai1ec-event-toggle .ai1ec-fa {
+            color: $medium-gray;
             font-size: 36px;
             line-height: 1;
+            @include transition(all 0.4s ease);
             
             &.ai1ec-fa-plus-circle:before {
                 content: '\f067';
@@ -73,6 +76,10 @@
             &.ai1ec-fa-minus-circle:before {
                 content: '\f068';
             }
+        }
+        
+        .ai1ec-event-header:hover .ai1ec-event-toggle .ai1ec-fa {
+            color: $body-color;
         }
     }
 }

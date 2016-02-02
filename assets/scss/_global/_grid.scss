@@ -66,9 +66,16 @@ $miscellaneous_widths: (1point5: 1.5, 2point4: 2.4);
 
 .column-inner {
     position: relative;
-    width: calc(100% - 30px);
-    margin: 0 15px;
-    padding: 15px;
+    width: calc(100% - 10px);
+    margin: 0 5px;
+    padding: 10px;
+    
+    @include breakpoint($size-md) {
+        width: calc(100% - 30px);
+        margin: 0 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @include make_columns(xs);

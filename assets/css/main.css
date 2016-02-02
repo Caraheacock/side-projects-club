@@ -1,9 +1,9 @@
-form:after, .puzzle-loop:after, .navigation:after, #pagination:after {
+form:after, .puzzle-loop:after, .navigation:after, #pagination:after, .puzzle-accordions-content .puzzle-accordion-headline:after {
   clear: both;
   display: table;
   content: " "; }
 
-.puzzle-button, input[type='button'], input[type='submit'], .commentlist .comment-reply-link, input:not([type='button']):not([type='submit']), select, textarea, #pagination a {
+.puzzle-button, input[type='button'], input[type='submit'], .commentlist .comment-reply-link, input:not([type='button']):not([type='submit']), select, textarea, #pagination a, .puzzle-accordions-content .column-inner {
   border-radius: 3px; }
 
 .row {
@@ -49,6 +49,10 @@ main {
     padding-top: 100px; }
     main > section:first-child:only-child {
       padding-bottom: 70px; }
+  main > section.no-padding-top:first-child {
+    padding-top: 70px; }
+  main > section.large-padding-top:first-child {
+    padding-top: 130px; }
   main ul, main ol {
     margin-left: 30px; }
 
@@ -113,9 +117,15 @@ a img {
 
 .column-inner {
   position: relative;
-  width: calc(100% - 30px);
-  margin: 0 15px;
-  padding: 15px; }
+  width: calc(100% - 10px);
+  margin: 0 5px;
+  padding: 10px; }
+  @media all and (min-width: 660px) {
+    .column-inner {
+      width: calc(100% - 30px);
+      margin: 0 15px;
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .column.xs-span1 {
   -webkit-flex-basis: 8.33333%;
@@ -969,13 +979,18 @@ h1, h2, h3, h4, h5, h6, ul, ol {
   font-family: "Open Sans", sans-serif;
   line-height: 1.5; }
 
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, p:first-child, ul:first-child, ol:first-child {
+  margin-top: 0; }
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, p:last-child, ul:last-child, ol:last-child {
+  margin-bottom: 0; }
+
 h1, h2, h3, h4, h5, h6, th {
   color: #444;
   font-weight: 600; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 3rem 0 1.5rem 0; }
-  h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6, h2 + h1, h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6, h3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6, h4 + h1, h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6, h5 + h1, h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6, h6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
     margin-top: 1.5rem; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none; }
@@ -996,13 +1011,13 @@ h3 {
   font-size: 2.4rem; }
 
 h4 {
-  font-size: 2.2rem; }
-
-h5 {
   font-size: 2rem; }
 
+h5 {
+  font-size: 1.8rem; }
+
 h6 {
-  font-size: 1.6rem; }
+  font-size: 1.4rem; }
 
 p, li, th, td {
   font-size: 1.4rem; }
@@ -1051,6 +1066,15 @@ a {
   h3 {
     font-size: 36px;
     font-size: 3.6rem; }
+
+  h4 {
+    font-size: 2.2rem; }
+
+  h5 {
+    font-size: 2rem; }
+
+  h6 {
+    font-size: 1.6rem; }
 
   p, li, th, td {
     font-size: 20px;
@@ -1546,6 +1570,53 @@ body.admin-bar.home #header {
       .who-its-for-word-cloud h2 {
         font-size: 4.8rem; } }
 
+/*---------------------------*/
+/* Puzzle Accordions Section */
+/*---------------------------*/
+.puzzle-accordions-content {
+  padding: 15px 0; }
+  .puzzle-accordions-content > .column {
+    margin-top: 10px;
+    padding: 0 15px; }
+    .puzzle-accordions-content > .column:first-child {
+      margin-top: 0; }
+  .puzzle-accordions-content .column-inner {
+    background-color: #fff;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+    .puzzle-accordions-content .column-inner.active-accordion .puzzle-accordion-headline .fa:before {
+      content: '\f068'; }
+  .puzzle-accordions-content .puzzle-accordion-headline {
+    margin: 0;
+    color: #6e90ca;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+    .puzzle-accordions-content .puzzle-accordion-headline span {
+      float: left;
+      display: block;
+      width: calc(100% - 40px); }
+    .puzzle-accordions-content .puzzle-accordion-headline .fa {
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      float: left;
+      width: 40px;
+      padding-left: 10px;
+      color: #aaa;
+      font-size: 36px; }
+      .puzzle-accordions-content .puzzle-accordion-headline .fa:before {
+        content: '\f067'; }
+    .puzzle-accordions-content .puzzle-accordion-headline:hover {
+      color: #f2af56; }
+      .puzzle-accordions-content .puzzle-accordion-headline:hover .fa {
+        color: #666; }
+  .puzzle-accordions-content .puzzle-accordion-content {
+    display: none;
+    padding: 10px 0; }
+
+.white-background .puzzle-accordions-content .column-inner {
+  background-color: #eee; }
+
 /*---------*/
 /* Vectors */
 /*---------*/
@@ -1698,18 +1769,25 @@ body.admin-bar.home #header {
   .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
     font-size: 24px;
     font-size: 2.4rem;
-    font-weight: 600; }
+    font-weight: 600;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
   .ai1ec-agenda-view .ai1ec-event .ai1ec-event-time {
     font-size: 16px;
     font-size: 1.6rem;
     font-weight: 400; }
   .ai1ec-agenda-view .ai1ec-event .ai1ec-event-toggle .ai1ec-fa {
+    color: #aaa;
     font-size: 36px;
-    line-height: 1; }
+    line-height: 1;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
     .ai1ec-agenda-view .ai1ec-event .ai1ec-event-toggle .ai1ec-fa.ai1ec-fa-plus-circle:before {
       content: '\f067'; }
     .ai1ec-agenda-view .ai1ec-event .ai1ec-event-toggle .ai1ec-fa.ai1ec-fa-minus-circle:before {
       content: '\f068'; }
+  .ai1ec-agenda-view .ai1ec-event .ai1ec-event-header:hover .ai1ec-event-toggle .ai1ec-fa {
+    color: #666; }
 
 .ai1ec-agenda-widget-view .ai1ec-event > a {
   border: 0; }
