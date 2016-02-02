@@ -54,7 +54,7 @@ main {
   main > section.large-padding-top:first-child {
     padding-top: 130px; }
   main ul, main ol {
-    margin-left: 30px; }
+    margin-left: 3rem; }
 
 section {
   position: relative;
@@ -67,18 +67,6 @@ section {
     padding-top: 60px; }
   section.large-padding-bottom {
     padding-bottom: 60px; }
-
-iframe {
-  display: block;
-  max-width: 100%; }
-
-img {
-  display: inline-block;
-  max-width: 100%;
-  height: auto; }
-
-a img {
-  border: 0; }
 
 /*-----------------*/
 /* Utility Classes */
@@ -119,13 +107,12 @@ a img {
   position: relative;
   width: calc(100% - 10px);
   margin: 0 5px;
-  padding: 10px; }
+  padding: 1rem; }
   @media all and (min-width: 660px) {
     .column-inner {
       width: calc(100% - 30px);
       margin: 0 15px;
-      padding-left: 15px;
-      padding-right: 15px; } }
+      padding: 1.5rem; } }
 
 .column.xs-span1 {
   -webkit-flex-basis: 8.33333%;
@@ -917,8 +904,7 @@ a img {
 /*------------------------------*/
 .aligncenter, .alignleft, .alignright {
   display: block;
-  margin: 20px auto;
-  margin: 2rem auto; }
+  margin: 1.5rem auto; }
 
 @media all and (min-width: 660px) {
   .alignleft, .alignright {
@@ -928,12 +914,12 @@ a img {
   .alignleft {
     float: left;
     clear: right;
-    margin-right: 2rem; }
+    margin-right: 1.5rem; }
 
   .alignright {
     float: right;
     clear: left;
-    margin-left: 2rem; } }
+    margin-left: 1.5rem; } }
 .bypostauthor {
   background-color: #eee; }
 
@@ -942,7 +928,7 @@ a img {
 
 .wp-caption {
   background-color: #eee;
-  padding: 10px; }
+  padding: 1.5rem; }
 
 .wp-caption-text, .gallery-caption {
   text-align: center; }
@@ -954,7 +940,8 @@ a img {
   list-style: none; }
   .categories .cat-item {
     display: inline-block;
-    margin: 5px 5px 5px 0; }
+    margin: 5px 5px 5px 0;
+    font-size: inherit; }
     .categories .cat-item a {
       display: block;
       padding: 5px 10px; }
@@ -1042,7 +1029,7 @@ small {
   font-size: 80%; }
 
 hr {
-  margin: 2rem 0;
+  margin: 3rem 0;
   border: 0;
   border-bottom: solid 1px #888; }
 
@@ -1056,15 +1043,12 @@ a {
 
 @media all and (min-width: 660px) {
   h1 {
-    font-size: 60px;
     font-size: 6rem; }
 
   h2 {
-    font-size: 45px;
     font-size: 4.5rem; }
 
   h3 {
-    font-size: 36px;
     font-size: 3.6rem; }
 
   h4 {
@@ -1077,7 +1061,6 @@ a {
     font-size: 1.6rem; }
 
   p, li, th, td {
-    font-size: 20px;
     font-size: 2rem; }
 
   p {
@@ -1173,6 +1156,21 @@ th {
 td, th {
   vertical-align: top;
   padding: 5px; }
+
+/*-------*/
+/* Media */
+/*-------*/
+iframe {
+  display: block;
+  max-width: 100%; }
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto; }
+
+a img {
+  border: 0; }
 
 /*--------*/
 /* Header */
@@ -1422,9 +1420,8 @@ body.admin-bar.home #header {
 /* Comments */
 /*----------*/
 .commentlist .comment {
-  padding: 10px 15px;
-  padding: 2rem 3rem;
-  border-bottom: solid 2px #eee; }
+  padding: 1.5rem 3rem;
+  border-bottom: solid 1px #eee; }
   .commentlist .comment:last-child {
     border-bottom: 0; }
 .commentlist .comment-meta a {
@@ -1516,7 +1513,6 @@ body.admin-bar.home #header {
 
 /* Paragraph spacing */
 .tight-spacing h1, .tight-spacing h2, .tight-spacing h3, .tight-spacing h4, .tight-spacing h5, .tight-spacing h6, .tight-spacing p, .tight-spacing ul, .tight-spacing ol {
-  margin: 5px 0;
   margin: 0.5rem 0; }
 
 /* Alignment */
@@ -1555,7 +1551,6 @@ body.admin-bar.home #header {
     position: relative;
     display: inline-block;
     margin: 0 10px;
-    font-size: 22px;
     font-size: 2.2rem;
     line-height: 1.5; }
     .who-its-for-word-cloud h2:nth-child(even) {
@@ -1727,7 +1722,7 @@ body.admin-bar.home #header {
 /*------------------*/
 .single-post-content {
   margin: 30px 0;
-  padding: 20px 0;
+  padding: 30px 0;
   border-top: solid 1px #aaa; }
   .single-post-content.comments-open {
     border-bottom: solid 1px #aaa; }
@@ -1808,11 +1803,9 @@ body.admin-bar.home #header {
 
 /* Contact Form 7 */
 .wpcf7-form span.wpcf7-not-valid-tip {
-  margin-top: -5px;
   margin-top: -0.5rem;
   padding: 0 20px;
   background-color: rgba(255, 0, 0, 0.5);
-  font-size: 14px;
   font-size: 1.4rem;
   color: #fff; }
 .wpcf7-form div.wpcf7-response-output {
@@ -1823,7 +1816,6 @@ body.admin-bar.home #header {
   border: 0;
   color: #fff; }
   .wpcf7-form div.wpcf7-response-output.wpcf7-mail-sent-ok {
-    background-color: #aaa;
     background-color: rgba(170, 170, 170, 0.5); }
 
 /*# sourceMappingURL=main.css.map */

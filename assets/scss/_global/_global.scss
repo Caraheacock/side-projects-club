@@ -23,30 +23,30 @@ main {
     
     > section {
         &:first-child {
-            padding-top: 100px;
+            padding-top: $nav-height + $space-unit;
             
             &:only-child {
-                padding-bottom: 70px;
+                padding-bottom: $space-unit * 2 + 10px;
             }
         }
         
         &.no-padding-top:first-child {
-            padding-top: 70px;
+            padding-top: $nav-height;
         }
         
         &.large-padding-top:first-child {
-            padding-top: 130px;
+            padding-top: $nav-height + ($space-unit * 2);
         }
     }
     
     ul, ol {
-        margin-left: 30px;
+        margin-left: ($text-space-unit * 2);
     }
 }
 
 section {
     position: relative;
-    padding: 30px 0;
+    padding: $space-unit 0;
     
     &.no-padding-top {
         padding-top: 0;
@@ -57,25 +57,10 @@ section {
     }
     
     &.large-padding-top {
-        padding-top: 60px;
+        padding-top: $space-unit * 2;
     }
     
     &.large-padding-bottom {
-        padding-bottom: 60px;
+        padding-bottom: $space-unit * 2;
     }
-}
-
-iframe {
-    display: block;
-    max-width: 100%;
-}
-
-img {
-    display: inline-block;
-    max-width: 100%;
-    height: auto;
-}
-
-a img {
-    border: 0;
 }

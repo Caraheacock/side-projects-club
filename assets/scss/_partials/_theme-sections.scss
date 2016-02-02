@@ -38,8 +38,7 @@
 
 .tight-spacing {
     h1, h2, h3, h4, h5, h6, p, ul, ol {
-        margin: 5px 0;
-        margin: 0.5rem 0;
+        margin: ($text-space-unit / 3) 0;
     }
 }
 
@@ -85,7 +84,6 @@
         position: relative;
         display: inline-block;
         margin: 0 10px;
-        font-size: 22px;
         font-size: 2.2rem;
         line-height: 1.5;
         
