@@ -1321,6 +1321,7 @@ body.admin-bar.home #header {
       margin-left: 15px;
       background-color: rgba(255, 255, 255, 0.9);
       color: #6e90ca;
+      font-size: 1.6rem;
       text-transform: uppercase; }
       #nav .home-scroll-to-content .puzzle-button:hover {
         background-color: #f2af56;
