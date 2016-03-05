@@ -1,0 +1,37 @@
+/*----------------*/
+/* Navigation Bar */
+/*----------------*/
+
+#nav {
+    &.home-nav {
+        &.animate-nav {
+            @include animation(navappear 1.5s ease 0s 1);
+        }
+        
+        .home-scroll-to-content {
+            display: block;
+        }
+    }
+    
+    .home-scroll-to-content {
+        display: none;
+        
+        .puzzle-button {
+            margin-left: 15px;
+            background-color: rgba(#fff, 0.9);
+            color: $blue;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            
+            &:hover {
+                background-color: $orange;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@include keyframes(navappear) {
+    0%, 50% { opacity: 0; }
+    100%    { opacity: 1; }
+}

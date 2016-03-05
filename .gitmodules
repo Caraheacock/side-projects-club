@@ -1,3 +1,6 @@
 [submodule "puzzle_pieces"]
 	path = puzzle_pieces
 	url = git@github.com:Caraheacock/puzzle_pieces.git
+[submodule "assets/scss/spc-common-styles"]
+	path = assets/scss/spc-common-styles
+	url = git@github.com:sideprojectsclub/spc-common-styles.git
