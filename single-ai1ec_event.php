@@ -5,8 +5,8 @@
                 <div class="column xs-span12<?php echo (is_active_sidebar('main-sidebar') ? ' lg-span8' : ''); ?>">
                     <div class="column-inner">
                     <?php
-                    if (have_posts()) {
-                        while (have_posts()) {
+                    if (have_posts()) :
+                        while (have_posts()) :
                             the_post(); ?>
                             <div class="single-post-meta">
                                 <h2><?php the_title(); ?></h2>
@@ -20,8 +20,8 @@
                             if (comments_open()) {
                                 comments_template();
                             }
-                        }
-                    }
+                        endwhile;
+                    endif;
                     ?>
                     </div>
                 </div>

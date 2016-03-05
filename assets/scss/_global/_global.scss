@@ -13,9 +13,14 @@ html {
 
 body {
     overflow-x: hidden;
-    font: 16px / 1.5 $open-sans;
-    font-size: 1.6rem;
+    font: 14px / 1.75 $open-sans;
+    font-size: 1.4rem;
     -webkit-font-smoothing: subpixel-antialiased;
+    
+    @include breakpoint($size-md) {
+        font-size: 2rem;
+        line-height: 1.85;
+    }
 }
 
 main {

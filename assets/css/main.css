@@ -39,9 +39,13 @@ html {
 
 body {
   overflow-x: hidden;
-  font: 16px/1.5 "Open Sans", sans-serif;
-  font-size: 1.6rem;
+  font: 14px/1.75 "Open Sans", sans-serif;
+  font-size: 1.4rem;
   -webkit-font-smoothing: subpixel-antialiased; }
+  @media all and (min-width: 660px) {
+    body {
+      font-size: 2rem;
+      line-height: 1.85; } }
 
 main {
   display: block; }
@@ -944,7 +948,11 @@ section {
     font-size: inherit; }
     .categories .cat-item a {
       display: block;
-      padding: 5px 10px; }
+      padding: 5px 10px;
+      background-color: #6e90ca;
+      color: #fff; }
+      .categories .cat-item a:hover {
+        background-color: #f2af56; }
 
 #wp-calendar {
   width: 100%;
@@ -957,6 +965,7 @@ section {
   display: none; }
 
 #commentform {
+  max-width: 100%;
   margin: 0; }
 
 /*------*/
@@ -1413,8 +1422,7 @@ body.admin-bar.home #header {
     padding-top: 0;
     border-top: 0; }
   .puzzle-loop .puzzle-button {
-    margin-left: 0;
-    margin-right: 0; }
+    margin-bottom: 1rem; }
 
 /*----------*/
 /* Comments */
@@ -1440,8 +1448,9 @@ body.admin-bar.home #header {
 /* Sidebar */
 /*---------*/
 #sidebar .sidebar-widget {
-  margin: 30px 0;
   margin: 3rem 0; }
+  #sidebar .sidebar-widget:first-child {
+    margin-top: 1rem; }
 #sidebar .post-date {
   margin-left: 5px; }
 #sidebar .screen-reader-text {
@@ -1450,7 +1459,6 @@ body.admin-bar.home #header {
   margin-left: 0;
   list-style: none; }
   #sidebar ul li {
-    padding: 10px 0;
     padding: 1rem 0;
     border-bottom: solid 1px #eee; }
     #sidebar ul li:last-child {
@@ -1720,6 +1728,9 @@ body.admin-bar.home #header {
 /*------------------*/
 /* Single Post Page */
 /*------------------*/
+.single-post-meta h4, .single-post-meta h6 {
+  margin: 0.75rem 0; }
+
 .single-post-content {
   margin: 30px 0;
   padding: 30px 0;

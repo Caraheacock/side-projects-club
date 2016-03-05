@@ -2,6 +2,12 @@
 /* Single Post Page */
 /*------------------*/
 
+.single-post-meta {
+    h4, h6 {
+        margin: ($text-space-unit / 2) 0;
+    }
+}
+
 .single-post-content {
     margin: $space-unit 0;
     padding: $space-unit 0;

@@ -58,6 +58,12 @@
         a {
             display: block;
             padding: 5px 10px;
+            background-color: $blue;
+            color: #fff;
+            
+            &:hover {
+                background-color: $orange;
+            }
         }
     }
 }
@@ -78,5 +84,6 @@
 }
 
 #commentform {
+    max-width: 100%;
     margin: 0;
 }

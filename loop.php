@@ -2,7 +2,7 @@
     <h2><a href="<?php echo get_the_permalink($post->ID);?>"><?php the_title(); ?></a></h2>
 
     <?php if (get_post_type($post) == 'post') : ?>
-    <h5><?php the_time('F j, Y'); ?></h5>
+    <h5><?php the_time('F j, Y'); ?>, by <?php the_author(); ?></h5>
     <?php endif; ?>
 
     <?php
@@ -15,5 +15,5 @@
     ?>
 
     <?php the_excerpt(); ?>
-    <p><a class="puzzle-button puzzle-button-secondary-color" href="<?php echo get_the_permalink($post->ID); ?>">Read More</a></p>
+    <p><a class="puzzle-button" href="<?php echo get_the_permalink($post->ID); ?>">Read More</a></p>
 </div>
