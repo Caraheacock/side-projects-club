@@ -1574,6 +1574,13 @@ a img {
   border-top: solid 1px #aaa; }
   .single-post-content.comments-open {
     border-bottom: solid 1px #aaa; }
+  @media all and (min-width: 660px) {
+    .single-post-content p, .single-post-content ul, .single-post-content ol {
+      margin: 2.25rem 0; }
+      .single-post-content p:first-child, .single-post-content ul:first-child, .single-post-content ol:first-child {
+        margin-top: 0; }
+      .single-post-content p:last-child, .single-post-content ul:last-child, .single-post-content ol:last-child {
+        margin-bottom: 0; } }
 
 /*-------------------*/
 /* Plugins Overrides */
