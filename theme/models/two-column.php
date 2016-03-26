@@ -50,7 +50,7 @@ $two_column->set_group_name('Two Column')
         ),
         'padding_top'       => array(
             'name'          => 'Top Padding',
-            'width'         => 'xs span12 sm-span6 md-span4',
+            'width'         => 'xs span12 sm-span6',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -61,7 +61,7 @@ $two_column->set_group_name('Two Column')
         ),
         'padding_bottom'    => array(
             'name'          => 'Bottom Padding',
-            'width'         => 'xs span12 sm-span6 md-span4',
+            'width'         => 'xs span12 sm-span6',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -72,11 +72,20 @@ $two_column->set_group_name('Two Column')
         ),
         'paragraph_spacing' => array(
             'name'          => 'Paragraph Spacing',
-            'width'         => 'xs-span12 sm-span6 md-span4',
+            'width'         => 'xs-span12 sm-span6',
             'input_type'    => 'select',
             'options'       => array(
                 'Loose'     => 'loose',
                 'Tight'     => 'tight'
+            )
+        ),
+        'align_items' => array(
+            'name'          => 'Vertically Align Columns',
+            'width'         => 'xs-span12 sm-span6',
+            'input_type'    => 'select',
+            'options'       => array(
+                'Center'    => 'center',
+                'Top'       => 'top'
             )
         )
     ));

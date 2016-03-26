@@ -3,7 +3,7 @@ form:after, .puzzle-loop:after, .navigation:after, #pagination:after, .puzzle-ac
   display: table;
   content: " "; }
 
-.puzzle-button, input[type='button'], input[type='submit'], .commentlist .comment-reply-link, input:not([type='button']):not([type='submit']), select, textarea, #pagination a, .puzzle-accordions-content .column-inner {
+.puzzle-button, button, input[type='button'], input[type='submit'], .commentlist .comment-reply-link, input, select, textarea, #pagination a, .puzzle-accordions-content .column-inner {
   border-radius: 3px; }
 
 .row {
@@ -75,7 +75,7 @@ section {
 /*-----------------*/
 /* Utility Classes */
 /*-----------------*/
-.puzzle-button, input[type='button'], input[type='submit'], .commentlist .comment-reply-link {
+.puzzle-button, button, input[type='button'], input[type='submit'], .commentlist .comment-reply-link {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   display: inline-block;
@@ -85,7 +85,7 @@ section {
   color: #fff;
   text-align: center;
   text-decoration: none; }
-  .puzzle-button:hover, input[type='button']:hover, input[type='submit']:hover, .commentlist .comment-reply-link:hover {
+  .puzzle-button:hover, button:hover, input[type='button']:hover, input[type='submit']:hover, .commentlist .comment-reply-link:hover {
     background-color: #f2af56;
     color: #fff; }
 
@@ -1020,7 +1020,7 @@ p, li, th, td {
 
 p, li, td {
   color: #666;
-  font-weight: 300; }
+  font-weight: 400; }
 
 p, ul, ol {
   margin: 1.5rem 0; }
@@ -1030,9 +1030,6 @@ p {
 
 li {
   margin: 0.5rem 0; }
-
-strong {
-  font-weight: 600; }
 
 small {
   font-size: 80%; }
@@ -1072,8 +1069,14 @@ a {
   p, li, th, td {
     font-size: 2rem; }
 
+  p, li, td {
+    font-weight: 300; }
+
   p {
-    line-height: 1.85; } }
+    line-height: 1.85; }
+
+  strong {
+    font-weight: 600; } }
 /*-------*/
 /* Forms */
 /*-------*/
@@ -1082,7 +1085,6 @@ form {
   margin: 0 auto; }
 
 label {
-  display: block;
   font-weight: 700;
   line-height: 1.5; }
 
@@ -1094,18 +1096,19 @@ button, input, select, textarea {
   -webkit-appearance: none;
   -moz-appearance: none; }
 
-input:not([type='button']):not([type='submit']), select, textarea {
+input, select, textarea {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   width: 100%;
   margin: 0.2rem 0 1rem 0;
   padding: 5px 10px;
   border: solid 1px #6e90ca;
+  background-color: #fff;
   font-weight: 300; }
-  input:not([type='button']):not([type='submit']):focus, select:focus, textarea:focus {
+  input:focus, select:focus, textarea:focus {
     border-color: #f2af56; }
 
-input:not([type='button']):not([type='submit']), select {
+input, select {
   height: 3.8rem; }
 
 input[type='checkbox'], input[type='radio'], input[type='submit'] {
@@ -1121,7 +1124,9 @@ input[type='file'] {
 input[type='radio'] {
   -webkit-appearance: radio; }
 
-input[type='button'], input[type='submit'] {
+button, input[type='button'], input[type='submit'] {
+  width: auto;
+  height: auto;
   text-transform: uppercase;
   white-space: normal;
   cursor: pointer; }
@@ -1434,6 +1439,12 @@ a img {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto; }
+
+.two-column-section.align-top .column {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
 
 .who-its-for-word-cloud {
   position: relative; }

@@ -19,6 +19,10 @@ function section_classes($page_section) {
     $section_classes .= (!empty($puzzle_options_data['padding_bottom']) ? ' ' . $puzzle_options_data['padding_bottom'] . '-padding-bottom' : '');
     $section_classes .= (!empty($puzzle_options_data['paragraph_spacing']) ? ' ' . $puzzle_options_data['paragraph_spacing'] . '-spacing' : '');
     
+    if (!empty($puzzle_options_data['align_items']) && $puzzle_options_data['align_items'] == 'top') {
+        $section_classes .= ' align-top';
+    }
+    
     return $section_classes;
 }
 
