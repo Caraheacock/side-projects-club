@@ -1,11 +1,10 @@
 <?php
 $footer = get_option('puzzle_footer');
-$social = array_filter(array(
-    'facebook'  => get_theme_mod('facebook'),
-    'meetup'    => get_theme_mod('meetup'),
-    'twitter'   => get_theme_mod('twitter'),
-    'tumblr'    => get_theme_mod('tumblr')
-));
+$social = get_theme_mod('social_media');
+
+foreach($social as $soc => $data) {
+    if (empty($data['link'])) unset($social[$soc]);
+}
 ?>
     <footer id="footer" class="blue-background">
         <div class="row">
@@ -35,14 +34,14 @@ $social = array_filter(array(
                     
                     <?php if (!empty($social)) : ?>
                     <ul class="spc-social-links">
-                        <?php foreach ($social as $soc => $link) :
+                        <?php foreach ($social as $soc => $data) :
                             if ($soc == 'meetup') {
                                 $icon = 'calendar-o';
                             } else {
                                 $icon = $soc;
                             }
                             ?>
-                        <li><a href="<?php echo $link; ?>" target="_blank"><i class="fa fa-<?php echo $icon; ?>"></i></a></li>
+                        <li><a href="<?php echo $data['link']; ?>"<?php echo (!empty($data['open_link_in_new_tab']) ? ' target="_blank"' : ''); ?>><i class="fa fa-<?php echo $icon; ?>"></i></a></li>
                         <?php endforeach; ?>
                     </ul>
                     <?php endif; ?>
