@@ -1083,6 +1083,8 @@ a {
 form {
   max-width: 600px;
   margin: 0 auto; }
+  form p {
+    margin: 0.5rem 0; }
 
 label {
   font-weight: 700;

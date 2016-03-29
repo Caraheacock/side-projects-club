@@ -5,7 +5,7 @@ $accordions->set_group_name('Accordions')
     ->set_single_name('Accordion')
     ->set_multiple(true)
     ->set_admin_column_classes('xs-span12')
-    ->set_order(60)
+    ->set_order(30)
     ->set_markup_attr(array(
         'headline'          => array(
             'name'          => 'Headline',
