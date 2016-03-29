@@ -1,5 +1,4 @@
 <?php
-$footer = get_option('puzzle_footer');
 $social = get_theme_mod('social_media');
 
 if (!empty($social)) {
