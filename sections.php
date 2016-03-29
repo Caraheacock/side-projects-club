@@ -8,15 +8,8 @@ if (!empty($page_sections)) :
         $puzzle_options_data = $page_section['options'];
         $puzzle_columns_data = (!empty($page_section['columns']) ? $page_section['columns'] : false);
         $puzzle_section_type = $page_section['type'];
-        
-        $section_id = 'section-' . ($s + 1);
-        if (!empty($puzzle_options_data['id'])) {
-            $section_id = to_slug($puzzle_options_data['id']);
-        } else if (!empty($puzzle_options_data['headline'])) {
-            $section_id = to_slug($puzzle_options_data['headline']);
-        }
         ?>
-        <section id="<?php echo $section_id; ?>" class="<?php echo section_classes($page_section); ?>">
+        <section id="<?php echo section_id($s, $page_section); ?>" class="<?php echo section_classes($page_section); ?>">
             <?php if (!empty($puzzle_options_data['headline'])) : ?>
             <div class="row puzzle-section-headline">
                 <div class="column xs-span12">

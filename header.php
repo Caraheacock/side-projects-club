@@ -1,7 +1,3 @@
-<?php
-$nav = get_option('puzzle_nav');
-$nav_logo = (!empty($nav['logo']) ? stripslashes_deep($nav['logo']) : false);
-?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

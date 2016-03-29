@@ -89,6 +89,16 @@ section {
     background-color: #f2af56;
     color: #fff; }
 
+.blue-background .puzzle-button {
+  background-color: #f2af56; }
+  .blue-background .puzzle-button:hover {
+    background-color: #fff;
+    color: #6e90ca; }
+
+.orange-background .puzzle-button:hover {
+  background-color: #fff;
+  color: #6e90ca; }
+
 /*-------------*/
 /* Grid System */
 /*-------------*/
@@ -1447,6 +1457,11 @@ a img {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start; }
+.two-column-section.align-center .column {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .who-its-for-word-cloud {
   position: relative; }
@@ -1567,6 +1582,27 @@ a img {
       background-color: #f2af56;
       color: #fff; }
 
+/*---------*/
+/* Vectors */
+/*---------*/
+.vector-container {
+  position: relative;
+  overflow: hidden;
+  height: 0; }
+  .vector-container svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%; }
+
+.small-logo-container {
+  display: block;
+  width: 36px;
+  padding-bottom: 50px; }
+  .small-logo-container:hover {
+    opacity: 0.75; }
+
 /*----------*/
 /* 404 Page */
 /*----------*/
@@ -1619,8 +1655,10 @@ a img {
   background: #eee;
   text-shadow: none; }
 
-.gray-background .ai1ec-agenda-widget-view .ai1ec-title, .gray-background .ai1ec-agenda-widget-view .ai1ec-date-title, .gray-background .ai1ec-agenda-view .ai1ec-title, .gray-background .ai1ec-agenda-view .ai1ec-date-title {
+.gray-background .ai1ec-agenda-widget-view .ai1ec-title, .gray-background .ai1ec-agenda-widget-view .ai1ec-date-title, .gray-background .ai1ec-agenda-view .ai1ec-title, .gray-background .ai1ec-agenda-view .ai1ec-date-title, .light-blue-background .ai1ec-agenda-widget-view .ai1ec-title, .light-blue-background .ai1ec-agenda-widget-view .ai1ec-date-title, .light-blue-background .ai1ec-agenda-view .ai1ec-title, .light-blue-background .ai1ec-agenda-view .ai1ec-date-title {
   background: #fff; }
+.gray-background .ai1ec-agenda-view .ai1ec-event, .light-blue-background .ai1ec-agenda-view .ai1ec-event {
+  background-color: #fff; }
 
 .ai1ec-agenda-view .ai1ec-event {
   padding-bottom: 1em;
@@ -1665,6 +1703,9 @@ a img {
 .ai1ec-dropdown-menu, .ai1ec-btn-group.ai1ec-open .ai1ec-dropdown-toggle, .ai1ec-popover {
   -webkit-box-shadow: none;
   box-shadow: none; }
+
+.ai1ec-calendar-toolbar {
+  background-color: transparent; }
 
 .ai1ec-month-view .ai1ec-allday .ai1ec-event, .ai1ec-month-view .ai1ec-multiday .ai1ec-event, .ai1ec-week-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event, .ai1ec-week-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event, .ai1ec-oneday-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event, .ai1ec-oneday-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event {
   text-shadow: none; }
@@ -1833,13 +1874,6 @@ body.admin-bar.home #header {
     right: 0;
     left: 0;
     width: 100%; }
-
-.small-logo-container {
-  display: block;
-  width: 36px;
-  padding-bottom: 50px; }
-  .small-logo-container:hover {
-    opacity: 0.75; }
 
 .spc-excitement-vector-container {
   padding-bottom: 91.91176%; }

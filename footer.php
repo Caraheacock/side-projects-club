@@ -2,8 +2,10 @@
 $footer = get_option('puzzle_footer');
 $social = get_theme_mod('social_media');
 
-foreach($social as $soc => $data) {
-    if (empty($data['link'])) unset($social[$soc]);
+if (!empty($social)) {
+    foreach($social as $soc => $data) {
+        if (empty($data['link'])) unset($social[$soc]);
+    }
 }
 ?>
     <footer id="footer" class="blue-background">
