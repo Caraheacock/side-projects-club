@@ -1463,26 +1463,6 @@ a img {
   -ms-flex-align: center;
   align-items: center; }
 
-.who-its-for-word-cloud {
-  position: relative; }
-  .who-its-for-word-cloud h2 {
-    position: relative;
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 2.2rem;
-    line-height: 1.5; }
-    .who-its-for-word-cloud h2:nth-child(even) {
-      -webkit-transform: translate(0, 25%);
-      -moz-transform: translate(0, 25%);
-      -ms-transform: translate(0, 25%);
-      transform: translate(0, 25%); }
-    @media all and (min-width: 660px) {
-      .who-its-for-word-cloud h2 {
-        font-size: 3.6rem; } }
-    @media all and (min-width: 850px) {
-      .who-its-for-word-cloud h2 {
-        font-size: 4.8rem; } }
-
 /*---------------------------*/
 /* Puzzle Accordions Section */
 /*---------------------------*/
@@ -1849,6 +1829,29 @@ body.admin-bar.home #header {
     opacity: 0; }
   100% {
     opacity: 1; } }
+/*----------*/
+/* Sections */
+/*----------*/
+.who-its-for-word-cloud {
+  position: relative; }
+  .who-its-for-word-cloud h2 {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 2.2rem;
+    line-height: 1.5; }
+    .who-its-for-word-cloud h2:nth-child(even) {
+      -webkit-transform: translate(0, 25%);
+      -moz-transform: translate(0, 25%);
+      -ms-transform: translate(0, 25%);
+      transform: translate(0, 25%); }
+    @media all and (min-width: 660px) {
+      .who-its-for-word-cloud h2 {
+        font-size: 3.6rem; } }
+    @media all and (min-width: 850px) {
+      .who-its-for-word-cloud h2 {
+        font-size: 4.8rem; } }
+
 /*---------*/
 /* Vectors */
 /*---------*/
