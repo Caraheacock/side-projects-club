@@ -27,7 +27,7 @@ add_action('widgets_init', 'sidebar_widget_init');
 
 // Add Styles and Scripts
 function puzzle_scripts() {
-    wp_enqueue_style('google-fonts-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
+    wp_enqueue_style('google-fonts-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600');
     $puzzle_style_location = '/assets/css/main.css';
     wp_enqueue_style('puzzle-style', get_template_directory_uri() . $puzzle_style_location, array(), filemtime(get_stylesheet_directory() . $puzzle_style_location));
     

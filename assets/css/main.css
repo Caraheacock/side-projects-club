@@ -50,27 +50,27 @@ body {
 main {
   display: block; }
   main > section:first-child {
-    padding-top: 100px; }
+    padding-top: 10rem; }
     main > section:first-child:only-child {
-      padding-bottom: 70px; }
+      padding-bottom: 7rem; }
   main > section.no-padding-top:first-child {
-    padding-top: 70px; }
+    padding-top: 7rem; }
   main > section.large-padding-top:first-child {
-    padding-top: 130px; }
+    padding-top: 13rem; }
   main ul, main ol {
     margin-left: 3rem; }
 
 section {
   position: relative;
-  padding: 30px 0; }
+  padding: 3rem 0; }
   section.no-padding-top {
     padding-top: 0; }
   section.no-padding-bottom {
     padding-bottom: 0; }
   section.large-padding-top {
-    padding-top: 60px; }
+    padding-top: 6rem; }
   section.large-padding-bottom {
-    padding-bottom: 60px; }
+    padding-bottom: 6rem; }
 
 /*-----------------*/
 /* Utility Classes */
@@ -79,10 +79,12 @@ section {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   border: 0;
   background-color: #6e90ca;
   color: #fff;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
   text-align: center;
   text-decoration: none; }
   .puzzle-button:hover, button:hover, input[type='button']:hover, input[type='submit']:hover, .commentlist .comment-reply-link:hover {
@@ -122,13 +124,13 @@ section {
 
 .column-inner {
   position: relative;
-  width: calc(100% - 10px);
+  width: calc(100% - 2rem);
   margin: 0 5px;
   padding: 1rem; }
   @media all and (min-width: 660px) {
     .column-inner {
-      width: calc(100% - 30px);
-      margin: 0 15px;
+      width: calc(100% - 3rem);
+      margin: 0 1.5rem;
       padding: 1.5rem; } }
 
 .column.xs-span1 {
@@ -957,11 +959,11 @@ section {
   list-style: none; }
   .categories .cat-item {
     display: inline-block;
-    margin: 5px 5px 5px 0;
+    margin: 0.5rem 0.5rem 0.5rem 0;
     font-size: inherit; }
     .categories .cat-item a {
       display: block;
-      padding: 5px 10px;
+      padding: 0.5rem 1rem;
       background-color: #6e90ca;
       color: #fff; }
       .categories .cat-item a:hover {
@@ -1100,7 +1102,7 @@ form {
     margin: 0.5rem 0; }
 
 label {
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.5; }
 
 label, input, select, textarea {
@@ -1150,7 +1152,6 @@ input[type='submit'] {
   float: right;
   min-width: 150px;
   max-width: 250px;
-  font-size: 20px;
   font-size: 2rem; }
 
 select {
@@ -1179,11 +1180,11 @@ tr:nth-child(even) {
   background-color: rgba(170, 170, 170, 0.2); }
 
 th {
-  font-weight: 700; }
+  font-weight: 600; }
 
 td, th {
   vertical-align: top;
-  padding: 5px; }
+  padding: 0.5rem; }
 
 /*-------*/
 /* Media */
@@ -1231,7 +1232,7 @@ a img {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 70px;
+    height: 7rem;
     padding: 5px; }
   #nav ul {
     margin: 0; }
@@ -1304,7 +1305,7 @@ a img {
       display: inline-block; }
       #nav-menu ul li a {
         display: block;
-        padding: 10px 15px; }
+        padding: 1rem 1.5rem; }
         #nav-menu ul li a:hover {
           color: #6e90ca; }
 
@@ -1318,7 +1319,7 @@ a img {
 /* Posts Loop */
 /*------------*/
 .puzzle-loop {
-  padding: 30px 0;
+  padding: 3rem 0;
   border-top: solid 1px #aaa; }
   .puzzle-loop:first-child {
     padding-top: 0;
@@ -1373,7 +1374,7 @@ a img {
 /*------------*/
 #pagination {
   margin: 0;
-  padding: 30px 0;
+  padding: 3rem 0;
   border-top: solid 1px #aaa;
   list-style: none; }
   #pagination li {
@@ -1381,7 +1382,7 @@ a img {
     font-size: 1.8rem; }
   #pagination a {
     display: inline-block;
-    padding: 15px 25px;
+    padding: 1.5rem 2.5rem;
     background-color: #fff;
     border: solid 2px #aaa;
     text-decoration: none; }
@@ -1392,11 +1393,11 @@ a img {
   #pagination #newer-pages {
     float: left; }
     #pagination #newer-pages .fa {
-      margin-right: 5px; }
+      margin-right: 0.5rem; }
   #pagination #older-pages {
     float: right; }
     #pagination #older-pages .fa {
-      margin-left: 5px; }
+      margin-left: 0.5rem; }
 
 /*----------*/
 /* Sections */
@@ -1473,10 +1474,10 @@ a img {
 /* Puzzle Accordions Section */
 /*---------------------------*/
 .puzzle-accordions-content {
-  padding: 15px 0; }
+  padding: 1.5rem 0; }
   .puzzle-accordions-content > .column {
-    margin-top: 10px;
-    padding: 0 15px; }
+    margin-top: 1rem;
+    padding: 0 1.5rem; }
     .puzzle-accordions-content > .column:first-child {
       margin-top: 0; }
   .puzzle-accordions-content .column-inner {
@@ -1511,7 +1512,7 @@ a img {
         color: #666; }
   .puzzle-accordions-content .puzzle-accordion-content {
     display: none;
-    padding: 10px 0; }
+    padding: 1rem 0; }
 
 .white-background .puzzle-accordions-content .column-inner {
   background-color: #eee; }
@@ -1520,7 +1521,7 @@ a img {
 /* Footer */
 /*--------*/
 #footer {
-  padding: 15px 0;
+  padding: 1.5rem 0;
   text-align: center; }
   #footer .column-inner {
     width: 100%;
@@ -1599,7 +1600,7 @@ a img {
 .error404 main {
   text-align: center; }
   .error404 main .puzzle-button {
-    margin-top: 30px; }
+    margin-top: 3rem; }
 
 /*------------------*/
 /* Single Post Page */
@@ -1608,8 +1609,8 @@ a img {
   margin: 0.75rem 0; }
 
 .single-post-content {
-  margin: 30px 0;
-  padding: 30px 0;
+  margin: 3rem 0;
+  padding: 3rem 0;
   border-top: solid 1px #aaa; }
   .single-post-content.comments-open {
     border-bottom: solid 1px #aaa; }
@@ -1627,6 +1628,15 @@ a img {
 /*
  * All in One Event Calendar
  */
+.timely {
+  color: #666;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem; }
+  .timely a {
+    color: #6e90ca; }
+    .timely a:hover, .timely a:focus {
+      color: #f2af56; }
+
 /* Agenda view */
 .ai1ec-agenda-widget-view .ai1ec-date, .ai1ec-agenda-view .ai1ec-date {
   background: none;
@@ -1634,6 +1644,8 @@ a img {
   .ai1ec-agenda-widget-view .ai1ec-date.ai1ec-today, .ai1ec-agenda-view .ai1ec-date.ai1ec-today {
     background: none;
     border: 0; }
+.ai1ec-agenda-widget-view .ai1ec-month, .ai1ec-agenda-view .ai1ec-month {
+  background-color: #6e90ca; }
 .ai1ec-agenda-widget-view .ai1ec-year, .ai1ec-agenda-view .ai1ec-year {
   -webkit-box-shadow: none;
   box-shadow: none; }
@@ -1643,7 +1655,13 @@ a img {
   box-shadow: none;
   border: 0;
   background: #eee;
+  color: #666;
   text-shadow: none; }
+
+.ai1ec-agenda-widget-view .ai1ec-event > a {
+  color: #6e90ca; }
+  .ai1ec-agenda-widget-view .ai1ec-event > a:hover {
+    color: #f2af56; }
 
 .gray-background .ai1ec-agenda-widget-view .ai1ec-title, .gray-background .ai1ec-agenda-widget-view .ai1ec-date-title, .gray-background .ai1ec-agenda-view .ai1ec-title, .gray-background .ai1ec-agenda-view .ai1ec-date-title, .light-blue-background .ai1ec-agenda-widget-view .ai1ec-title, .light-blue-background .ai1ec-agenda-widget-view .ai1ec-date-title, .light-blue-background .ai1ec-agenda-view .ai1ec-title, .light-blue-background .ai1ec-agenda-view .ai1ec-date-title {
   background: #fff; }
@@ -1657,14 +1675,15 @@ a img {
   .ai1ec-agenda-view .ai1ec-event.ai1ec-expanded, .ai1ec-agenda-view .ai1ec-event:hover {
     -webkit-box-shadow: none;
     box-shadow: none; }
+  .ai1ec-agenda-view .ai1ec-event:hover .ai1ec-event-title {
+    color: #f2af56; }
   .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
-    font-size: 24px;
+    color: #6e90ca;
     font-size: 2.4rem;
     font-weight: 600;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
   .ai1ec-agenda-view .ai1ec-event .ai1ec-event-time {
-    font-size: 16px;
     font-size: 1.6rem;
     font-weight: 400; }
   .ai1ec-agenda-view .ai1ec-event .ai1ec-event-toggle .ai1ec-fa {
@@ -1689,7 +1708,55 @@ a img {
 .ai1ec-month-view .ai1ec-date {
   text-shadow: none; }
 
+/* Week view */
+.ai1ec-week-view .ai1ec-week a.ai1ec-event-container,
+.ai1ec-oneday-view .ai1ec-oneday a.ai1ec-event-container {
+  border: 0;
+  background-color: #6e90ca;
+  background-image: none;
+  color: #fff; }
+
+/* Popup */
+.ai1ec-popup-title {
+  font-size: 1.6rem; }
+
+.ai1ec-popover.ai1ec-popup .ai1ec-event-time,
+.ai1ec-popup-excerpt {
+  font-size: 1.3rem; }
+
+/* Buttons */
+.timely .ai1ec-btn-default, .timely .ai1ec-btn-default.ai1ec-disabled, .timely .ai1ec-btn-default.ai1ec-disabled:hover {
+  border-color: transparent;
+  background-color: #6e90ca;
+  color: #fff; }
+
+.ai1ec-btn-group > .ai1ec-btn,
+.ai1ec-btn-group > .ai1ec-dropdown-menu,
+.ai1ec-btn-group > .ai1ec-popover,
+.ai1ec-single-event .ai1ec-actions .ai1ec-btn {
+  font-size: 1.4rem; }
+
+.timely .ai1ec-btn-default:hover,
+.timely .ai1ec-btn-default:focus,
+.timely .ai1ec-btn-default:active,
+.timely .ai1ec-btn-default.ai1ec-active,
+.ai1ec-open .ai1ec-dropdown-toggle.timely .ai1ec-btn-default {
+  border-color: transparent;
+  background-color: #f2af56;
+  color: #fff; }
+
+/* Single Post */
+.ai1ec-single-event {
+  font-size: 1.8rem;
+  line-height: 1.5; }
+
+.ai1ec-field-label {
+  font-size: 1.4rem; }
+
 /* Miscellaneous */
+.ai1ec-calendar-toolbar {
+  border: 0; }
+
 .ai1ec-dropdown-menu, .ai1ec-btn-group.ai1ec-open .ai1ec-dropdown-toggle, .ai1ec-popover {
   -webkit-box-shadow: none;
   box-shadow: none; }
@@ -1697,7 +1764,18 @@ a img {
 .ai1ec-calendar-toolbar {
   background-color: transparent; }
 
-.ai1ec-month-view .ai1ec-allday .ai1ec-event, .ai1ec-month-view .ai1ec-multiday .ai1ec-event, .ai1ec-week-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event, .ai1ec-week-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event, .ai1ec-oneday-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event, .ai1ec-oneday-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event {
+.ai1ec-calendar-title,
+.ai1ec-calendar-title-short {
+  font-size: 1.6rem; }
+
+.ai1ec-month-view .ai1ec-allday .ai1ec-event,
+.ai1ec-month-view .ai1ec-multiday .ai1ec-event,
+.ai1ec-week-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event,
+.ai1ec-week-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event,
+.ai1ec-oneday-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event,
+.ai1ec-oneday-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event,
+.ai1ec-week-view .ai1ec-week a.ai1ec-event-container,
+.ai1ec-oneday-view .ai1ec-oneday a.ai1ec-event-container {
   text-shadow: none; }
 
 /* Contact Form 7 */
