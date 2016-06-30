@@ -17,11 +17,11 @@ $found_posts = $wp_query->found_posts;
                     <?php
                     while (have_posts()) {
                         the_post();
-                        get_template_part('loop');
+                        get_template_part('theme/loops/loop');
                     }
                 
                     if ($found_posts > $posts_per_page) :
-                        get_template_part('pagination');
+                        get_template_part('theme/partials/pagination');
                     endif;
                 else : ?>
                     <h1>No results</h1>

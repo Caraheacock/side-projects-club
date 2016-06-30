@@ -16,11 +16,11 @@ $found_posts = $wp_query->found_posts;
                 if (have_posts()) :
                     while (have_posts()) {
                         the_post();
-                        get_template_part('loop');
+                        get_template_part('theme/loops/loop');
                     }
                 
                     if ($found_posts > $posts_per_page) :
-                        get_template_part('pagination');
+                        get_template_part('theme/partials/pagination');
                     endif;
                 else : ?>
                     <p>Sorry, no posts found for &quot;<?php echo get_search_query(); ?>&quot;.</p>

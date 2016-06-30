@@ -1,6 +1,6 @@
 <?php
-if (have_posts()) {
-    while (have_posts()) {
+if (have_posts()) :
+    while (have_posts()) :
         the_post();
         get_header();
         ?>
@@ -22,6 +22,6 @@ if (have_posts()) {
         </section>
         <?php
         get_footer();
-    }
-}
+    endwhile;
+endif;
 ?>
