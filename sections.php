@@ -29,7 +29,7 @@ if (!empty($page_sections)) :
                 
                 $loop_file_location = 'theme/loops/' . $loop_file_name . '.php';
         
-                foreach($puzzle_columns_data as $puzzle_column) {
+                foreach ($puzzle_columns_data as $puzzle_column) {
                     include(locate_template($loop_file_location));
                 }
                 ?>

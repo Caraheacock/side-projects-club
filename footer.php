@@ -1,12 +1,13 @@
-<?php
-$social = get_theme_mod('social_media');
+    </main>
+    <?php
+    $social = get_theme_mod('social_media');
 
-if (!empty($social)) {
-    foreach($social as $soc => $data) {
-        if (empty($data['link'])) unset($social[$soc]);
+    if (!empty($social)) {
+        foreach($social as $soc => $data) {
+            if (empty($data['link'])) unset($social[$soc]);
+        }
     }
-}
-?>
+    ?>
     <footer id="footer" class="blue-background">
         <div class="row">
             <div class="column xs-span12">
