@@ -17,22 +17,15 @@ $found_posts = $wp_query->found_posts;
                     get_template_part('theme/loops/loop');
                 }
             
-                if ($found_posts > $posts_per_page) :
-                    get_template_part('theme/partials/pagination');
-                endif;
-            else : ?>
+                if ($found_posts > $posts_per_page) get_template_part('theme/partials/pagination');
+                ?>
+            <?php else : ?>
                 <h1>No results</h1>
                 <p>Sorry, no posts found.</p>
-                <?php
-            endif;
-            ?>
+            <?php endif; ?>
             </div>
         </div>
-        <?php
-        if (is_active_sidebar('main-sidebar')) {
-            get_sidebar();
-        }
-        ?>
+        <?php if (is_active_sidebar('main-sidebar')) get_sidebar(); ?>
     </div>
 </section>
 <?php get_footer(); ?>

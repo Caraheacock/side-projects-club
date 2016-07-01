@@ -37,13 +37,9 @@
                     <?php if (!empty($social)) : ?>
                     <ul class="spc-social-links">
                         <?php foreach ($social as $soc => $data) :
-                            if ($soc == 'meetup') {
-                                $icon = 'calendar-o';
-                            } else {
-                                $icon = $soc;
-                            }
+                            $icon = ($soc == 'meetup' ? 'calender-o' : $soc);
                             ?>
-                        <li><a href="<?php echo $data['link']; ?>"<?php echo (!empty($data['open_link_in_new_tab']) ? ' target="_blank"' : ''); ?>><i class="fa fa-<?php echo $icon; ?>"></i></a></li>
+                        <li><a href="<?php echo $data['link']; ?>"<?php if (!empty($data['open_link_in_new_tab']) echo ' target="_blank"'; ?>><i class="fa fa-<?php echo $icon; ?>"></i></a></li>
                         <?php endforeach; ?>
                     </ul>
                     <?php endif; ?>
