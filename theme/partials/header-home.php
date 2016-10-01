@@ -14,7 +14,8 @@
         </svg>
     </div>
     <div class="spc-header-logo-text-container">
-        <svg version="1.1" preserveAspectRatio="xMidYMin meet" viewBox="0 0 334 178">
+        <svg version="1.1" preserveAspectRatio="xMidYMin meet" viewBox="0 0 334 178" aria-labelledby="spc-header-logo-title">
+            <title id="spc-header-logo-title">Side Projects Club</title>
             <g>
                 <path fill="#FFFFFF" d="M189.7,131.1c-5.5,0-9.9,1.8-13.1,5.5c-3.2,3.7-4.8,8.7-4.8,15.1c0,6.6,1.5,11.7,4.6,15.3
                     c3.1,3.6,7.5,5.4,13.2,5.4c3.5,0,7.5-0.6,12-1.9v5.1c-3.5,1.3-7.8,2-12.9,2c-7.4,0-13.1-2.3-17.2-6.8c-4-4.5-6-10.9-6-19.2

@@ -7,7 +7,7 @@
         </div>
         <?php if (is_front_page()) : ?>
         <div class="column xs-span8 sm-span6 md-span4 lg-span3 home-scroll-to-content">
-            <a class="puzzle-button" href="#">Explore <i class="fa fa-angle-double-down"></i></a>
+            <a class="puzzle-button" href="#"><?php _e('Explore', 'side-projects-club'); ?> <i class="fa fa-angle-double-down"></i></a>
         </div>
         <?php endif; ?>
         <div class="column xs-span4 sm-span6 md-span8 lg-span9">

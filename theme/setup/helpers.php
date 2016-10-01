@@ -1,14 +1,16 @@
 <?php
 
 /*
- * Puzzle
+ * Side Projects Club
  * Helper functions
  */
 
-// Generates favicon code
-//
-// Returns a string of favicons separated by new lines
-function favicons() {
+/*
+ * Generates favicon code
+ *
+ * Returns a string of favicons separated by new lines
+ */
+function get_the_favicons() {
     $favicons = array();
     
     $apple_sizes = array(57, 114, 72, 144, 60, 120, 76, 152);
@@ -42,16 +44,21 @@ function favicons() {
     return join("\n    ", $favicons);
 }
 
-// Determines classes for a section. Can be edited on a theme-by-theme basis.
-//
-// $page_section - array of data pertaining to the section
-//
-// Returns a string of classes for a section
-function section_classes($page_section) {
+/* Echos the favicons */
+function the_favicons() { echo get_the_favicons(); }
+
+/*
+ * Determines classes for a section. Can be edited on a theme-by-theme basis.
+ *
+ * $page_section - array of data pertaining to the section
+ *
+ * Returns a string of classes for a section
+ */
+function spc_section_classes($page_section) {
     $puzzle_options_data = $page_section['options'];
     
     $section_classes  = $page_section['type'] . '-section';
-    $section_classes .= (!empty($puzzle_options_data['background_color']) ? ' ' . $puzzle_options_data['background_color'] : '');
+    $section_classes .= (!empty($puzzle_options_data['background_color']) ? ' ' . $puzzle_options_data['background_color'] . '-background' : '');
     $section_classes .= (!empty($puzzle_options_data['padding_top']) ? ' ' . $puzzle_options_data['padding_top'] . '-padding-top' : '');
     $section_classes .= (!empty($puzzle_options_data['padding_bottom']) ? ' ' . $puzzle_options_data['padding_bottom'] . '-padding-bottom' : '');
     $section_classes .= (!empty($puzzle_options_data['paragraph_spacing']) ? ' ' . $puzzle_options_data['paragraph_spacing'] . '-spacing' : '');
@@ -63,22 +70,25 @@ function section_classes($page_section) {
     return $section_classes;
 }
 
-// Determines the ID for a section. Can be edited on a theme-by-theme basis.
-//
-// $s - integer, the section number we are on
-// $page_section - array of data pertaining to the section
-//
-// Returns a string of the ID for a section
-function section_id($s, $page_section) {
+/*
+ * Determines the ID for a section. Can be edited on a theme-by-theme basis.
+ *
+ * $s - integer, the section number we are on
+ * $page_section - array of data pertaining to the section
+ *
+ * Returns a string of the ID for a section
+ */
+function spc_section_id($s, $page_section) {
     $puzzle_options_data = $page_section['options'];
     
     $section_id = 'section-' . ($s + 1);
     if (!empty($puzzle_options_data['id'])) {
-        $section_id = to_slug($puzzle_options_data['id']);
+        $section_id = ppb_parameterize($puzzle_options_data['id']);
     } else if (!empty($puzzle_options_data['headline'])) {
-        $section_id = to_slug($puzzle_options_data['headline']);
+        $section_id = ppb_parameterize($puzzle_options_data['headline']);
     }
     
     return $section_id;
 }
+
 ?>

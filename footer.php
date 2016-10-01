@@ -36,10 +36,11 @@
                     
                     <?php if (!empty($social)) : ?>
                     <ul class="spc-social-links">
-                        <?php foreach ($social as $soc => $data) :
-                            $icon = ($soc == 'meetup' ? 'calender-o' : $soc);
+                        <?php
+                        foreach ($social as $soc => $data) :
+                            $icon = ($soc == 'meetup' ? 'calendar-o' : $soc);
                             ?>
-                        <li><a href="<?php echo $data['link']; ?>"<?php if (!empty($data['open_link_in_new_tab']) echo ' target="_blank"'; ?>><i class="fa fa-<?php echo $icon; ?>"></i></a></li>
+                            <li><a href="<?php echo $data['link']; ?>"<?php if (!empty($data['open_link_in_new_tab'])) echo ' target="_blank"'; ?> aria-label="<?php echo ucfirst($soc); ?>" title="<?php echo ucfirst($soc); ?>"><i class="fa fa-<?php echo $icon; ?>" aria-hidden="true"></i></a></li>
                         <?php endforeach; ?>
                     </ul>
                     <?php endif; ?>

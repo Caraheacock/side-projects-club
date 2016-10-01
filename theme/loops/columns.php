@@ -1,4 +1,4 @@
-<div class="column <?php echo (!empty($puzzle_column['classes']) ? $puzzle_column['classes'] : 'xs-span12'); echo (!empty($puzzle_column['align_text']) ? ' align-text-' . $puzzle_column['align_text'] : ''); ?>">
+<div class="column <?php echo (!empty($puzzle_column['classes']) ? $puzzle_column['classes'] : 'xs-span12'); if (!empty($puzzle_column['align_text'])) echo ' align-text-' . $puzzle_column['align_text']; ?>">
     <div class="column-inner">
         <?php
         if (empty($puzzle_column['skip_filter'])) {

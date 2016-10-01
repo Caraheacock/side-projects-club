@@ -15,5 +15,5 @@
     ?>
 
     <?php the_excerpt(); ?>
-    <p><a class="puzzle-button" href="<?php echo get_the_permalink($post->ID); ?>">Read More</a></p>
+    <p><a class="puzzle-button" href="<?php echo get_the_permalink($post->ID); ?>"><?php _e('Read More', 'side-projects-club'); ?></a></p>
 </div>

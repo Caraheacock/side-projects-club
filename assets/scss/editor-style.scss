@@ -1,0 +1,13 @@
+@import 'spc-common-styles/_global/_variables';
+@import 'spc-common-styles/_global/_mixins';
+@import 'spc-common-styles/_global/_resets';
+
+body { margin: 8px; }
+
+@import 'spc-common-styles/_global/_utility';
+@import 'spc-common-styles/_global/_global';
+@import 'spc-common-styles/_global/_wordpress';
+@import 'spc-common-styles/_global/_typography';
+@import 'spc-common-styles/_global/_forms';
+@import 'spc-common-styles/_global/_tables';
+@import 'spc-common-styles/_global/_media';

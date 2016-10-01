@@ -12,7 +12,7 @@ the_post();
                     <?php
                     $categories = get_the_category();
                     if ($categories) : ?>
-                        <h6>Categories:
+                        <h6><?php _e('Categories:', 'side-projects-club'); ?>
                             <ul class="categories">
                                 <?php foreach ($categories as $c) : ?>
                                 <li class="cat-item"><a href="<?php echo get_category_link($c->term_id); ?>" title="View all posts in <?php echo $c->name; ?>"><?php echo $c->name; ?></a></li>
@@ -27,7 +27,17 @@ the_post();
                 </div>
             
                 <div class="single-post-content<?php if (comments_open()) echo ' comments-open'; ?>">
-                    <?php the_content(); ?>
+                    <?php
+                    the_content();
+                    
+                    $args = array(
+                        'before'            => '<p class="single-post-page-links">' . __('Pages:', 'side-projects-club'),
+                        'after'             => '</p>',
+                        'link_before'       => '<span>',
+                        'link_after'        => '</span>'
+                    );
+                    wp_link_pages($args);
+                    ?>
                 </div>
                 
                 <?php if (comments_open()) comments_template(); ?>

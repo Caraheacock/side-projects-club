@@ -1,42 +1,21 @@
 <?php
-// Puzzle Pieces required settings
-function puzzle_config_location() { return 'theme/settings/puzzle_config.php'; }
+
+/*
+ * Side Projects Club
+ */
+
+/* Puzzle Pieces required file */
 require_once('puzzle_pieces/puzzle_pieces.php');
 
-// Register Menus
-function puzzle_menus() {
-    register_nav_menus( array(
-        'primary'   => 'Primary Menu',
-        'footer'    => 'Footer Menu'
-    ));
-}
-add_action('after_setup_theme', 'puzzle_menus');
+/*
+ * Puzzle Page Builder config
+ * Only include if the plugin is active
+ */
+if (class_exists('PuzzlePageBuilder')) require_once('theme/miscellaneous/puzzle_config.php');
 
-// Initialize sidebar widget
-function sidebar_widget_init() {
-    register_sidebar(array(
-        'name'          => 'Main Sidebar',
-        'id'            => 'main-sidebar',
-        'before_widget' => '<div class="sidebar-widget">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h4>',
-        'after_title'   => '</h4>',
-    ));
+/* Theme setup */
+foreach (glob(get_stylesheet_directory() . '/theme/setup/*.php') as $filename) {
+    include $filename;
 }
-add_action('widgets_init', 'sidebar_widget_init');
-
-// Add Styles and Scripts
-function puzzle_scripts() {
-    wp_enqueue_style('google-fonts-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600');
-    $puzzle_style_location = '/assets/css/main.css';
-    wp_enqueue_style('puzzle-style', get_template_directory_uri() . $puzzle_style_location, array(), filemtime(get_stylesheet_directory() . $puzzle_style_location));
-    
-    $puzzle_script_location = '/assets/js/main.js';
-    wp_enqueue_script('puzzle-script', get_template_directory_uri() . $puzzle_script_location, array('jquery'), filemtime(get_stylesheet_directory() . $puzzle_script_location));
-}
-add_action('wp_enqueue_scripts', 'puzzle_scripts');
-
-// Set $content_width variable
-if (!isset($content_width)) $content_width = 1200;
 
 ?>

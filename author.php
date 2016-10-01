@@ -1,31 +1,26 @@
 <?php
-global $wp_query;
-
-$posts_per_page = $wp_query->query_vars['posts_per_page'];
-$found_posts = $wp_query->found_posts;
-
 $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
-?>
 
-<?php get_header(); ?>
+get_header();
+?>
 <section>
     <div class="row">
         <div class="column xs-span12<?php echo (is_active_sidebar('main-sidebar') ? ' lg-span8' : ''); ?>">
             <div class="column-inner">
                 <?php if (have_posts()) : ?>
-                    <h2>Author: <?php echo $curauth->display_name; ?></h2>
-                    <h4><?php echo $found_posts ?> post<?php if ($found_posts != 1) echo 's'; ?> written by <?php echo $curauth->display_name; ?></h4>
+                    <h2><?php _e('Author:', 'side-projects-club'); ?> <?php echo $curauth->display_name; ?></h2>
+                    <h4><?php echo $found_posts ?> post<?php if ($found_posts != 1) echo 's'; ?> <?php _e('written by', 'side-projects-club'); ?> <?php echo $curauth->display_name; ?></h4>
                     <?php
                     while (have_posts()) {
                         the_post();
                         get_template_part('theme/loops/loop');
                     }
             
-                    if ($found_posts > $posts_per_page) get_template_part('theme/partials/pagination');
+                    get_template_part('theme/partials/pagination');
                     ?>
                 <?php else : ?>
-                    <h1>No results</h1>
-                    <p>Sorry, no posts by <?php echo $curauth->display_name; ?>.</p>
+                    <h1><?php _e('No results', 'side-projects-club'); ?></h1>
+                    <p><?php _e('Sorry, no posts by', 'side-projects-club'); ?> <?php echo $curauth->display_name; ?>.</p>
                 <?php endif; ?>
             </div>
         </div>
