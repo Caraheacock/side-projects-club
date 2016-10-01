@@ -18,7 +18,7 @@ function spc_insert_formats($init_array) {
             'title'     => 'Button',
             'inline'    => 'a',
             'selector'  => 'a',
-            'classes'   => 'puzzle-button'
+            'classes'   => 'spc-button'
         )
     );
     

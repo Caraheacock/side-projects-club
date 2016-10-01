@@ -37,7 +37,7 @@ jQuery('document').ready(function($){
     }
     
     // Scroll down button on the home page
-    var homeScroll = $('.home-scroll-to-content .puzzle-button');
+    var homeScroll = $('.home-scroll-to-content .spc-button');
     
     homeScroll.click(function(e) {
         e.preventDefault();
