@@ -4,9 +4,6 @@
  * Side Projects Club
  */
 
-/* Puzzle Pieces required file */
-require_once('puzzle_pieces/puzzle_pieces.php');
-
 /*
  * Puzzle Page Builder config
  * Only include if the plugin is active
