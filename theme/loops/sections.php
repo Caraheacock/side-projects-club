@@ -1,5 +1,5 @@
 <?php
-$page_sections = get_post_meta($post->ID, '_puzzle_page_sections', true);
+$page_sections = (new PuzzlePageBuilder)->sections_data();
 $puzzle_sections = (new PuzzleSections)->sections();
 
 if (!empty($page_sections)) :
@@ -14,31 +14,29 @@ if (!empty($page_sections)) :
         
         $puzzle_options_data = $page_section['options'];
         $puzzle_columns_data = (!empty($page_section['columns']) ? $page_section['columns'] : false);
-        
-        $main_content = (!empty($puzzle_options_data['main_content']) ? $puzzle_options_data['main_content'] : false);
         ?>
         <section id="<?php echo spc_section_id($s, $page_section); ?>" class="<?php echo spc_section_classes($page_section); ?>">
             <?php if (!empty($puzzle_options_data['headline'])) : ?>
-            <div class="row puzzle-section-headline">
-                <div class="column xs-span12">
-                    <div class="column-inner">
-                        <h2><?php echo $puzzle_options_data['headline']; ?></h2>
+            <div class="row pz-section-headline">
+                <div class="col xs-12">
+                    <div class="col-inner">
+                        <h2><?php echo esc_html($puzzle_options_data['headline']); ?></h2>
                     </div>
                 </div>
             </div>
             <?php endif; ?>
             
-            <?php if (!empty($main_content)) : ?>
-            <div class="row puzzle-main-content">
-                <div class="column xs-span12">
-                    <div class="column-inner">
-                        <?php echo apply_filters('the_content', $main_content); ?>
+            <?php if (!empty($puzzle_options_data['main_content'])) : ?>
+            <div class="row pz-main-content">
+                <div class="col xs-12">
+                    <div class="col-inner">
+                        <?php echo ppb_format_content($puzzle_options_data['main_content']); ?>
                     </div>
                 </div>
             </div>
             <?php endif; ?>
             
-            <div class="row<?php echo ($puzzle_section_type == 'accordions' ? ' puzzle-accordions-content' : ''); ?>">
+            <div class="row<?php echo ($puzzle_section_type == 'accordions' ? ' pz-accordions-content' : ''); ?>">
                 <?php
                 $loop_file_name = $puzzle_section_type;
                 

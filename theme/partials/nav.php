@@ -1,46 +1,30 @@
-<nav id="nav"<?php echo (is_front_page() ? ' class="home-nav animate-nav"' : ''); ?>>
+<nav class="main-nav<?php if (is_front_page()) echo ' home-nav animate-nav'; ?>">
     <div class="row">
-        <div class="column xs-span8 sm-span6 md-span4 lg-span3 nav-logo">
+        <div class="col xs-8 sm-6 md-4 lg-3 nav-logo">
             <a class="small-logo-container" href="<?php echo get_site_url(); ?>">
                 <?php include(TEMPLATEPATH . '/assets/images/logo.svg'); ?>
             </a>
         </div>
         <?php if (is_front_page()) : ?>
-        <div class="column xs-span8 sm-span6 md-span4 lg-span3 home-scroll-to-content">
+        <div class="col xs-8 sm-6 md-4 lg-3 home-scroll-to-content">
             <a class="spc-button" href="#"><?php _e('Explore', 'side-projects-club'); ?> <i class="fa fa-angle-double-down"></i></a>
         </div>
         <?php endif; ?>
-        <div class="column xs-span4 sm-span6 md-span8 lg-span9">
+        <div class="col xs-4 sm-6 md-8 lg-9">
             <?php
             if (has_nav_menu('primary')) {
                 $args = array(
-                    'theme_location'  => 'primary',
-                    'menu'            => '',
-                    'container'       => 'div',
-                    'container_id'    => 'nav-menu',
-                    'before'          => '',
-                    'after'           => '',
-                    'link_before'     => '',
-                    'link_after'      => '',
-                    'items_wrap'      => '<ul id="%1$s">%3$s</ul>',
-                    'depth'           => 0,
-                    'walker'          => ''
+                    'theme_location'    => 'primary',
+                    'container_id'      => 'desktop-nav-menu',
+                    'container_class'   => 'desktop-nav-menu'
                 );
                 wp_nav_menu($args);
             
                 $args = array(
-                    'theme_location'  => 'primary',
-                    'menu'            => '',
-                    'container'       => 'div',
-                    'container_id'    => 'dl-menu',
-                    'container_class' => 'dl-menuwrapper',
-                    'before'          => '',
-                    'after'           => '',
-                    'link_before'     => '',
-                    'link_after'      => '',
-                    'items_wrap'      => '<button class="dl-trigger">Open Menu</button><ul class="dl-menu">%3$s</ul>',
-                    'depth'           => 0,
-                    'walker'          => ''
+                    'theme_location'    => 'primary',
+                    'container_id'      => 'dl-menu',
+                    'container_class'   => 'dl-menuwrapper',
+                    'items_wrap'        => '<button class="dl-trigger">Open Menu</button><ul class="dl-menu">%3$s</ul>'
                 );
                 wp_nav_menu($args);
             }

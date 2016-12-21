@@ -3,7 +3,7 @@ $prev_text = '<i class="fa fa-angle-left"></i> ' . __('Older', 'side-projects-cl
 $next_text = __('Newer', 'side-projects-club') . ' <i class="fa fa-angle-right"></i>';
 
 if (get_previous_posts_link() || get_next_posts_link()) : ?>
-<div id="pagination">
+<div class="pagination">
     <?php if (!get_previous_posts_link()) : ?>
     <span class="prev page-numbers disabled"><?php echo $prev_text; ?></span>
     <?php endif; ?>

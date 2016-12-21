@@ -4,12 +4,12 @@
 
 $header-max-width: 500;
 
-.home #header {
+.home .main-header {
     height: 100%;
     background-color: $blue;
 }
 
-body.admin-bar.home #header {
+body.admin-bar.home .main-header {
     height: calc(100% - 46px);
     
     @include breakpoint(783px) {

@@ -2,10 +2,10 @@ jQuery('document').ready(function($){
     var $window = $(window),
         $body = $('body'),
         $adminBar = $('#wpadminbar'),
-        $header = $('#header'),
-        $nav = $('#nav'),
+        $header = $('.main-header'),
+        $nav = $('.main-nav'),
         $main = $('main'),
-        $footer = $('#footer');
+        $footer = $('.main-footer');
     
     // Sticky navigation bar
     var adminBarHeight = 0,

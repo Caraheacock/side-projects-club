@@ -8,7 +8,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class('smooth-scroll-enabled'); ?>>
-    <header id="header">
+    <header class="main-header">
         <?php
         if (is_front_page()) get_template_part('theme/partials/header', 'home');
         get_template_part('theme/partials/nav');

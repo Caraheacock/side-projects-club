@@ -1,11 +1,17 @@
 <?php get_header(); ?>
 <section>
     <div class="row">
-        <div class="column xs-span12<?php echo (is_active_sidebar('main-sidebar') ? ' lg-span8' : ''); ?>">
-            <div class="column-inner">
-                <h2><?php echo pluralize($wp_query->found_posts, 'search result'); ?> for: &quot;<?php echo get_search_query(); ?>&quot;</h2>
-                <?php
-                if (have_posts()) :
+        <div class="col xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
+            <div class="col-inner">
+                <?php if (have_posts()) : ?>
+                    <h2><?php printf(__('Search: %s', 'side-projects-club'), get_search_query()); ?></h2>
+                    <h4><?php
+                        echo pluralize(
+                            $wp_query->found_posts,
+                            _x('result', 'noun', 'side-projects-club'),
+                            _x('results', 'plural noun', 'side-projects-club')
+                        ); ?></h4>
+                    <?php
                     while (have_posts()) {
                         the_post();
                         get_template_part('theme/loops/loop');
@@ -14,7 +20,8 @@
                     get_template_part('theme/partials/pagination');
                     ?>
                 <?php else : ?>
-                    <p><?php _e('Sorry, no posts found for', 'side-projects-club'); ?> &quot;<?php echo get_search_query(); ?>&quot;.</p>
+                    <h1><?php _e('No results', 'side-projects-club'); ?></h1>
+                    <p><?php printf(_x('Sorry, no posts found for %s.', 'search query', 'side-projects-club'), '&ldquo;' . get_search_query() . '&rdquo;'); ?></p>
                 <?php endif; ?>
             </div>
         </div>

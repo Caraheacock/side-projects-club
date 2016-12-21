@@ -2,7 +2,7 @@
 /* Navigation Bar */
 /*----------------*/
 
-#nav {
+.main-nav {
     &.home-nav {
         &.animate-nav {
             @include animation(navappear 1.5s ease 0s 1);
